@@ -1,0 +1,15 @@
+================= Current Balance =================
+
+curl -X POST \
+  http://127.0.0.1:9944 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc":"2.0",
+    "method":"eth_getBalance",
+    "params": ["0x36E8631dB39c24C1A7De8fb56f60ff9adf75F070", "latest"],
+    "id":1
+  }'
+
+
+================= Current Chain Id =================
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
