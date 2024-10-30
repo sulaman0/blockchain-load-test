@@ -10,9 +10,6 @@ async function transfer(fromAddress, toAddress, privateKey) {
     const gasLimit = 21204;
     const nonce = await web3.eth.getTransactionCount(fromAddress, 'latest'); // get the latest nonce
     console.log('nonce: ',nonce);
-
-    
-
     
     const tx = {
         'from': fromAddress,
