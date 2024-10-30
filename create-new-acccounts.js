@@ -1,7 +1,7 @@
 import ethers from 'ethers';
 
 // Replace with your actual account private key
-const privateKeyA = '0x6cbafbcf0584e667d9233aa8eb093dd4e6cadbde8a35eebc5339e66d1a05b796';
+const privateKeyA = '0xcc225d615bf5cc9d1cdd77bfa6c4a11e1a801749f3cb9007f0dae9057975f2cc';
 const providerUrl = 'http://127.0.0.1:9933'; // Replace with your Infura project ID or another provider URL
 
 const provider = new ethers.providers.JsonRpcProvider(providerUrl);
@@ -21,11 +21,11 @@ async function createAndTransfer() {
         console.log(`node transfer-a-to-b-and-b-to-a ${wallet.privateKey} ${wallet2.privateKey}`);
     }
 
-    const transferAmount = ethers.utils.parseEther('50000'); // 100 ETH
+    const transferAmount = ethers.utils.parseEther('100000'); // 100 ETH
 
     for (let i = 0; i < accounts.length; i++) {
         const walletB = accounts[i];
-      
+
         // Estimate gas fees
         const gasPrice = await provider.getGasPrice();
         const gasLimit = ethers.utils.hexlify(6000000); // Standard gas limit for ETH transfer
