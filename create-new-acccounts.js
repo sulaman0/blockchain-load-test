@@ -1,7 +1,7 @@
 import ethers from 'ethers';
 
 // Replace with your actual account private key
-const privateKeyA = '0xcc225d615bf5cc9d1cdd77bfa6c4a11e1a801749f3cb9007f0dae9057975f2cc';
+const privateKeyA = '0xaeee248046ee3c1f90e12a2a8b1179fb10013485ea11153fa2a169701d097844';
 const providerUrl = 'http://127.0.0.1:9933'; // Replace with your Infura project ID or another provider URL
 
 const provider = new ethers.providers.JsonRpcProvider(providerUrl);

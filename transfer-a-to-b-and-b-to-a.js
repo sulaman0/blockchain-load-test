@@ -17,7 +17,7 @@ const provider = new ethers.providers   .JsonRpcProvider(providerUrl);
 
 const walletA = new ethers.Wallet(privateKeyA, provider);
 const walletB = new ethers.Wallet(privateKeyB, provider);
-const largeData = '0x' + 'f'.repeat(500000); // Example large payload of 50000 hex characters
+const largeData = '0x' + 'f'.repeat(2); // Example large payload of 500000 hex characters
 //const largeData = '0x';
 
 async function transfer() {
@@ -107,7 +107,10 @@ async function main() {
             // await transfer().catch((error) => console.error(error.message));
         // await sleep(6000); // Sleep for 10 seconds
         await transfer().catch((error) => {
-            console.log(error.error);
+            console.log("Transfer Error:", error);
+            if (error.cause) {
+                console.error("Cause:", error.cause.desc);
+            }
             // console.error(); 
         });       
     }
