@@ -1,8 +1,8 @@
 import ethers from 'ethers';
 
 // Replace with your actual account private key
-const privateKeyA = '0xaeee248046ee3c1f90e12a2a8b1179fb10013485ea11153fa2a169701d097844';
-const providerUrl = 'http://127.0.0.1:9933'; // Replace with your Infura project ID or another provider URL
+const privateKeyA = '0x22542729922f73d47df09fb1e11bceca83cc4a5398f4c19e3046e41bbe6e4e39';
+const providerUrl = 'https://dev-node-rpc.elysiumchain.tech'; // Replace with your Infura project ID or another provider URL
 
 const provider = new ethers.providers.JsonRpcProvider(providerUrl);
 const walletA = new ethers.Wallet(privateKeyA, provider);
@@ -21,7 +21,7 @@ async function createAndTransfer() {
         console.log(`node transfer-a-to-b-and-b-to-a ${wallet.privateKey} ${wallet2.privateKey}`);
     }
 
-    const transferAmount = ethers.utils.parseEther('100000'); // 100 ETH
+    const transferAmount = ethers.utils.parseEther('1000000'); // 100 ETH
 
     for (let i = 0; i < accounts.length; i++) {
         const walletB = accounts[i];

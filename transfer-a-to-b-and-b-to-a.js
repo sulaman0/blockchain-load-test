@@ -11,7 +11,7 @@ if (args.length === 0) {
 
 const privateKeyA = args[0];
 const privateKeyB = args[1];
-const providerUrl = 'http://127.0.0.1:9933'; // Replace with your Infura project ID or another provider URL
+const providerUrl = 'https://dev-node-rpc.elysiumchain.tech'; // Replace with your Infura project ID or another provider URL
 
 const provider = new ethers.providers   .JsonRpcProvider(providerUrl);
 
