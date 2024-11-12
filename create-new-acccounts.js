@@ -1,7 +1,7 @@
 import ethers from 'ethers';
 
 // Replace with your actual account private key
-const privateKeyA = '0xa43cfbdc0fcc638e7738327e7e419419157566f8cc93c0f3d3fb902054093af7'; // 0x2159E6a550D6fB55DA567820A335e7D7013ac112
+const privateKeyA = '0xd56c5a72c0b97be36b88f4c428b0fe65f57c0efd52e7f6910da33f304692d567'; // 0x25eC5de1dc51b2510Ec37DD2a8F30069Fda9DE85
 const providerUrl = 'https://dev-node-rpc.elysiumchain.tech'; // Replace with your Infura project ID or another provider URL
 
 const provider = new ethers.providers.JsonRpcProvider(providerUrl);
